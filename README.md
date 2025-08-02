@@ -5,7 +5,7 @@
 
 ## What's different?
 ~~**The path variables to files and directories were changed**~~\
-**The apps.json file is being checked whether it's in /data/apps.json or /data/quickapp/apps.json**
+**The `apps.json` file is being checked whether it's in `/data` or `/data/quickapp`**
 
 That's literally it.
 
