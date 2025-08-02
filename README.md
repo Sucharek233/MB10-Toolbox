@@ -4,20 +4,8 @@
 **Warning! I don't take any credit for this app!** I only decompiled it and changed a few variables to make it work on the Mi Band 10.
 
 ## What's different?
-**The path variables to files and directories were changed**
-- Old:
-```
-local appJsonPath = '/data/quickapp/apps.json'
-local appJsonPathHide = '/data/quickapp/apps.json_hide'
-local appPathApp = '/data/quickapp/app/'
-```
-
-- New:
-```
-local appJsonPath = '/data/apps.json'
-local appJsonPathHide = '/data/apps.json_hide'
-local appPathApp = '/data/app/'
-```
+~~**The path variables to files and directories were changed**~~\
+**The apps.json file is being checked whether it's in /data/apps.json or /data/quickapp/apps.json**
 
 That's literally it.
 
