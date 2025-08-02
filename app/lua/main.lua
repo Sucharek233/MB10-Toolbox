@@ -253,15 +253,16 @@ local function fileExists(name)
     if f~=nil then io.close(f) return true else return false end
 end
 
+-- It seems like this is different everywhere? Let's just verify both paths...
 -- Original from MB9
--- local appJsonPath = '/data/quickapp/apps.json'
--- local appJsonPathHide = '/data/quickapp/apps.json_hide'
--- local appPathApp = '/data/quickapp/app/'
+local appJsonPath = '/data/quickapp/apps.json'
+local appJsonPathHide = '/data/quickapp/apps.json_hide'
+local appPathApp = '/data/quickapp/app/'
 
 -- New for MB10
-local appJsonPath = '/data/apps.json'
-local appJsonPathHide = '/data/apps.json_hide'
-local appPathApp = '/data/app/'
+local appJsonPathNew = '/data/apps.json'
+local appJsonPathHideNew = '/data/apps.json_hide'
+local appPathAppNew = '/data/app/'
 
 local appPathSystem = '/data/quickapp/system/'
 local appPathApp_file1 = '/data/quickapp/cache/'
@@ -938,6 +939,15 @@ local function createAppPage(rootWd)
     return root
 end
 
+local function checkAppJsonPath()
+    if fileExists(appJsonPathNew) then
+        appJsonPath = appJsonPathNew
+        appJsonPathHide = appJsonPathHideNew
+        appPathApp = appPathAppNew
+    end
+end
+
+checkAppJsonPath()
 appsPage1 = createAppPage(rootbase)
 
 showPage(mainPage)
