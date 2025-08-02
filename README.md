@@ -8,7 +8,7 @@
 - Old:
 ```
 local appJsonPath = '/data/quickapp/apps.json'
-local appJsonPathHide = '/data/quickapp/apps.js
+local appJsonPathHide = '/data/quickapp/apps.json_hide'
 local appPathApp = '/data/quickapp/app/'
 ```
 
